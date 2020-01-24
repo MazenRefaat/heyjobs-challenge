@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 /**
 * Header
+* @type Component
 * @description component to wrap logo accross application routes
 * @returns Header component
 */
