@@ -24,7 +24,7 @@ const JobDetails = (props) => {
         }).catch(err => {
             console.log('error', err)
         })
-    },[props.match.params])
+    },[props])
 
     return (
         <StyledWrapper>
