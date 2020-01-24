@@ -6,9 +6,11 @@ import {
     StyledTitle, 
     StyledContent 
 } from './Styles';
+import JobList from '../../components/JobList/JobList';
 
 /**
  * Home
+ * @type View Component
  * @description view component displayed in root route and responsible for wrapping JobList Component
  * @returns Home component
  */
@@ -28,6 +30,8 @@ const Home = () => (
             <StyledTitle>
                 Available Jobs
             </StyledTitle>
+
+            <JobList />
         </StyledContent>
     </StyledMain>
 )
