@@ -1,8 +1,8 @@
 import React from 'react';
-import './App.css';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Home from './views/Home/Home';
 import Header from './components/Header/Header';
+import JobDetails from './views/JobDetails/JobDetails';
 
 /**
  * App
@@ -14,7 +14,8 @@ const App = () => (
         <Header />
 
         <Switch>
-            <Route path='/jobs' component={Home} />
+            <Route exact path='/jobs' component={Home} />
+            <Route path='/jobs/:id' component={JobDetails} />
             <Redirect exact from='/' to='/jobs' />
         </Switch>
     </BrowserRouter>

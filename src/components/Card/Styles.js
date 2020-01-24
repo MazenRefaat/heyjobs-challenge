@@ -11,8 +11,9 @@ export const StyledTitleWrapper = styled.div`
     justify-content: space-between
 `;
 
-export const StyledTitle = styled.h3`
+export const StyledTitle = styled.h5`
     color: purple;
+    font-size: 16px;
     font-weight: bold;
     margin-bottom: 10px;
 `;

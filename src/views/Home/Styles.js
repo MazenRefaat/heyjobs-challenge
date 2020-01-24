@@ -4,14 +4,22 @@ export const StyledMain = styled.main`
     display: flex;
     justify-content: space-between;
     padding: 25px;
+
+    @media (max-width: 900px) {
+        flex-direction: column
+    }
 `;
 
 export const StyledAside = styled.aside`
     flex-basis: 40%;
+
+    @media (max-width: 900px) {
+        margin-bottom: 50px;
+    }
 `;
 
 export const StyledTitle = styled.h3`
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
