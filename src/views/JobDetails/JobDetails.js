@@ -14,13 +14,18 @@ const JobDetails = (props) => {
 
     useEffect(()=>{
         const {id} = props.match.params;
-
+        
         JobsDetailsService(id).then(res => {
-            setJob(res.data)
+            console.log('res', res);
+            if(res && res.data){
+                setJob(res.data)
+            } else {
+                props.history.push('/404');
+            }
         }).catch(err => {
             console.log('error', err)
         })
-    },[])
+    },[props.match.params])
 
     return (
         <StyledWrapper>
