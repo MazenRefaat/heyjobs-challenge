@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Home from './views/Home/Home';
 import Header from './components/Header/Header';
 import JobDetails from './views/JobDetails/JobDetails';
+import NotFound from './views/NotFound/NotFound';
 
 /**
  * App
@@ -15,8 +16,10 @@ const App = () => (
 
         <Switch>
             <Route exact path='/jobs' component={Home} />
+            <Route path='/404' component={NotFound} />
             <Route path='/jobs/:id' component={JobDetails} />
             <Redirect exact from='/' to='/jobs' />
+            <Redirect to='/404' />
         </Switch>
     </BrowserRouter>
 )
