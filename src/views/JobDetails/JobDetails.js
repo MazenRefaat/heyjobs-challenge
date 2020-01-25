@@ -16,7 +16,6 @@ const JobDetails = (props) => {
         const {id} = props.match.params;
         
         JobsDetailsService(id).then(res => {
-            console.log('res', res);
             if(res && res.data){
                 setJob(res.data)
             } else {
@@ -25,7 +24,7 @@ const JobDetails = (props) => {
         }).catch(err => {
             console.log('error', err)
         })
-    },[props.match.params])
+    },[props])
 
     return (
         <StyledWrapper>
