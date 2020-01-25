@@ -9,6 +9,9 @@ import { Link } from 'react-router-dom';
 
 configure({ adapter: new Adapter() });
 
+/**
+ * Header component test suite
+ */
 describe('<Header />', ()=> {
     it('should render logo element', ()=> {
         const wrapper = shallow(<Header />)
