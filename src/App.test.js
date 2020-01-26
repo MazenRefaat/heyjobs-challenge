@@ -30,4 +30,10 @@ describe('<App/>', ()=> {
     const lazyElement = await waitForElement(()=> getByText(/Come join us at HeyJobs/))
     expect(lazyElement).toBeInTheDocument();
   });
+
+  test('renders lazy NotFound component ', async ()=> {
+    const { getByText } = renderWithRouter(<NotFound />, { initialEntries: ['/404']})
+    expect(getByText(/Not Found/)).toBeInTheDocument();
+
+  });
 })
